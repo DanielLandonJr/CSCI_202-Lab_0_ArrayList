@@ -2,14 +2,9 @@
 * Name:
 * Date Written:
 * Purpose: Test the methods in ADT MyStringArrrayList
-*  
-* <p><strong>author: </strong><em>Daniel C. Landon Jr.</em></p>
-* <p><strong>instructor: </strong><em>Dr. Bob Walsh</em></p>
-* <p><strong>class: </strong><em>CSCI 202 - Introduction to Software Systems</em></p>
-* <p><strong>date: </strong><em>01.23.2020</em></p>
-* <p><strong>NOTE: </strong><em>Class supplied as part of course, modified per instructions for assignment.</em></p>
-*
 */
+
+package app;
 
 import java.util.*;
 
@@ -26,9 +21,12 @@ public class MyStringArrayListTest{
 			mylist.addLast(input.next());
 		}//for
 		
+		// extra method as project instructions
+		mylist.enterSentence();
+		
 		System.out.println("# of words in this list is " + mylist.getSize());
 		System.out.println("The words in the list are " + mylist);
-		/*
+		
 		System.out.println("Enter one more word. ");
 		mylist.addFront(input.next());
 		System.out.println("The words in the list are " + mylist);
@@ -45,7 +43,10 @@ public class MyStringArrayListTest{
 		
 		System.out.println("# of words in this list is " + mylist.getSize());
 		System.out.println("The words in the list are " + mylist);
-		*/
+		
+		// i realize that the instructions say to not modify the code, however the Scanner input object is never closed and it will bug me to no end if i do not close it
+		input.close();
+
 	}//main
 	
 }//class
